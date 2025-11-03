@@ -35,3 +35,42 @@ console.log(divEl1);
 
 const clCont = document.querySelectorAll('.content');
 console.log(clCont);
+
+// обробка подій (будь який зовнішній вплив на об'єкт)
+
+const btn = document.getElementById('clickBtn');
+
+console.log(btn);
+
+// функція обобник події
+const clickHendler = function(event) {
+    console.log('Button was clicked');
+};
+
+btn.onclick = clickHendler;
+
+// зняти подію
+btn.onclick = null;
+
+//----------------------------------
+
+const loginButton = document.getElementById('loginButton');
+
+function loginButtonHendler(event) {
+    alert('Log in in process');
+};
+
+loginButton.addEventListener('click', loginButtonHendler);
+
+// зняти подію
+loginButton.removeEventListener('click', loginButtonHendler);
+
+//-----------------------------------
+
+//  Виводити "Click me", коли наводимо курсор на кнопку loginButton
+
+function loginMoseMoveHandler(e) {
+    console.log('Click me!');
+}
+
+loginButton.addEventListener('mousemove', loginMoseMoveHandler);
