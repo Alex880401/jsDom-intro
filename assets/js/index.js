@@ -74,3 +74,62 @@ function loginMoseMoveHandler(e) {
 }
 
 loginButton.addEventListener('mousemove', loginMoseMoveHandler);
+
+// Атрибути
+// доступ до атрибутів як до властивостей об'єкта
+
+const p1 = document.querySelector('#p1');
+
+console.log(p1);
+
+console.log(p1.title);
+
+// Вивести id параграфа
+console.log(p1.id);
+
+p1.title = 'New title'
+
+// булевські атрибути
+p1.hiden = true;
+
+// доступ до атрибута стилів (через властивість)
+p1.style.color = 'red'
+p1.style.backgroundColor = 'orange'
+
+// інший синтаксис (через метод)
+const p2 = document.querySelector('#p2');
+
+// задати значення атрибута
+p2.setAttribute('title', 'Title of p2');
+
+p2.setAttribute('style', 'font-size: 10px; color: yellow');
+
+// <p hiden....
+//p2.setAttribute('hidden', 'hidden')
+
+// отримати значення атрибута
+console.log(p2.getAttribute('style'));
+
+//Задати для баді колір тла
+//const docBody = document.querySelector('body');
+//docBody.style.backgroundColor = 'green'
+
+//document.querySelector('body').style.backgroundColor = 'green';
+
+document.body.setAttribute('style', 'background-color: green');
+
+//Зміна контенту в елементі
+p2.textContent = 'New content'
+
+//Задати атрибути зображення по об'єкту
+const imageAttr = {src: "https://media.istockphoto.com/id/1443562748/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BC%D0%B8%D0%BB%D0%B0%D1%8F-%D1%80%D1%8B%D0%B6%D0%B0%D1%8F-%D0%BA%D0%BE%D1%88%D0%BA%D0%B0.jpg?s=612x612&w=0&k=20&c=k8RwP4usK_LCpQ1bPn3fNDLk3vtfptH7CEcEMZw_K1A=", alt: 'cat'};
+
+const im = document.querySelector('img');
+
+im.src = imageAttr.src;
+im.alt = imageAttr.alt;
+
+// задати розміри
+//im.setAttribute('width', '200');
+
+im.setAttribute('style', 'width: 200px');
