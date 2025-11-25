@@ -6,3 +6,16 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.div {
+    border: 5px solid green;
+    padding: 30px;
+}
+
+.div2 {
+    background-color: grey;
+}
+
+.title-border {
+    border: 5px solid red;
+}
