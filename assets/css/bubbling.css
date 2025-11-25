@@ -6,3 +6,9 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+section {
+    border:  5px solid green;
+    padding: 30px;
+}
+
